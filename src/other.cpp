@@ -1,7 +1,7 @@
 #include <iostream>
 #include "other.hpp"
 
-void other (std::string s, char a[][10])
+void other(std::string s, char a[][10])
 {
     if (s == "help") {
         help();
@@ -9,16 +9,16 @@ void other (std::string s, char a[][10])
     if (s == "show") {
         show_board (a);    
     }   
-    if (s == "start"){
+    if (s == "start") {
         std::cout<< "\t**** The game started ****\n";
     }   
-    if (s == "exit" || s == "quit"){
+    if (s == "exit" || s == "quit") {
        std::cout<<"You left the game ...\n";
        _Exit(s[0]);
     }   
 }
 
-void help ()
+void help()
 {
     std::cout << "\n\t--help\n\n";
     std::cout << "\t- The game will be held between the computer and the user.\n";
@@ -35,12 +35,10 @@ void help ()
     std::cout << "\t- Enter your shot (ex. 2.3 or 2 3 or 2/3).\n\n";
 }
 
-
-
-void show_board (char arr[][10])
+void show_board(char arr[][10])
 {
     std::cout<<"\n  ";
-    for (int i = 0; i < 10; ++i){
+    for (int i = 0; i < 10; ++i) {
         std::cout << i <<" ";
     } std::cout << std::endl;
     for (int i = 0; i < 10; ++i) {

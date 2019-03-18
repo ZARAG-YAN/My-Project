@@ -4,7 +4,7 @@
 // dumps,imported coordinates as arguments.Checks the surrounding area of the user's boat.
 
 
-bool up (char a[][10], char player_board[][10], int row, int col)
+bool up(char a[][10], char player_board[][10], int row, const int& col)
 {  
     row -= 1;
     while (a[row][col] == 'o' && row >= 0) {
@@ -13,10 +13,11 @@ bool up (char a[][10], char player_board[][10], int row, int col)
         } else {
             return false;
         }
-    }   
+    }
+    return true;
 }
 
-bool down (char a[][10], char player_board[][10], int row, int col)
+bool down(char a[][10], char player_board[][10], int row, const int& col)
 {  
     row += 1;
     while (a[row][col] == 'o' && row <= 9) {
@@ -26,8 +27,9 @@ bool down (char a[][10], char player_board[][10], int row, int col)
             return false;
         }   
     }   
+    return true;
 }
-bool left (char a[][10], char player_board[][10], int row, int col)
+bool left(char a[][10], char player_board[][10], const int& row, int col)
 {
     col -= 1;
     while (a[row][col] == 'o' && col >= 0) {
@@ -37,9 +39,10 @@ bool left (char a[][10], char player_board[][10], int row, int col)
             return false;
         }
     }
+    return true;
 }
 
-bool right (char a[][10], char player_board[][10], int row, int col)
+bool right(char a[][10], char player_board[][10], const int& row, int col)
 {
     col += 1;
     while (a[row][col] == 'o' && col <= 9) {
@@ -49,5 +52,6 @@ bool right (char a[][10], char player_board[][10], int row, int col)
             return false;
         }
     }
+    return true;
 }
 

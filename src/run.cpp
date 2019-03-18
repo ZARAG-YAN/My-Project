@@ -3,12 +3,13 @@
 #include "other.hpp"
 #include "gen_ship.hpp"
 #include "is_dead.hpp"
-bool user_input (char play_b[][10], int& row, int& col, char rand_b[][10])
+
+bool user_input(int& row, int& col, char rand_b[][10])
 {
     std::string str("");
     do {
-          getline (std::cin, str);
-          other (str, rand_b);
+          getline(std::cin, str);
+          other(str, rand_b);
           if (str.size() != 3) {
               std::cout << "Please input two numbers ." << std::endl;
           } else if (str[0] < '0'|| str[0] > '9'|| str[2] < '0'|| str[2] > '9'|| str == " ") {
@@ -23,20 +24,20 @@ bool user_input (char play_b[][10], int& row, int& col, char rand_b[][10])
           } else {
               std::cout << "Please enter shot as follows: 2.3 or 2 3 or 2/3";
           }
-     } while(!true);
+     } while (!true);
      return true;
 }
 
 
-void start (char play_b[][10],char rand_b[][10], int& row, int& col )
+void start(char play_b[][10],char rand_b[][10], int& row, int& col )
 {
     int x_count = 0;
     std::string str("");
-    while(str != "start") {
-    getline(std::cin, str);
+    while (str != "start") {
+        getline(std::cin, str);
     }
     other(str,rand_b);
-    while (user_input (play_b, row, col, rand_b)) {
+    while (user_input (row, col, rand_b)) {
         if (rand_b[row][col] == '-') {
              if (play_b[row][col] == '*') {
                  std::cout << "Duplicate value.\n";
@@ -62,8 +63,7 @@ void start (char play_b[][10],char rand_b[][10], int& row, int& col )
     }
 }
 
-
-void run ()
+void run()
 {
     int row = 0;
     int col = 0;
@@ -76,8 +76,6 @@ void run ()
             player_board[i][j] = '-';
         }
     }
-    gen_ships (rand_board);
-    start (player_board, rand_board, row, col);
-
+    gen_ships(rand_board);
+    start(player_board, rand_board, row, col);
 }
-
