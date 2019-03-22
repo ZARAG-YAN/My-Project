@@ -1,0 +1,1 @@
+obj/brief.dep obj/brief.o: src/brief.cpp inc/brief.hpp

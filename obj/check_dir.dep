@@ -1,0 +1,1 @@
+obj/check_dir.dep obj/check_dir.o: src/check_dir.cpp inc/check_dir.hpp

@@ -2,7 +2,7 @@
 #include "brief.hpp"
 //Some info about holding the "Battleship" games.
 void brief_game()
-{   
+{
     std::cout << " \t*****************************************\n";
     std::cout << " \t*\tWelcome 'Battleship' game     \t*\n";
     std::cout << " \t*****************************************\n\n";
@@ -14,4 +14,4 @@ void brief_game()
     std::cout << "-- If you want to show generated board input 'show'.\n";
     std::cout << "-- If you want to leave the game input 'exit' or 'quit'.\n";
     std::cout << "-- For more information write 'help'\n\n";
-}    
+}

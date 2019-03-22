@@ -1,0 +1,1 @@
+obj/other.dep obj/other.o: src/other.cpp inc/other.hpp

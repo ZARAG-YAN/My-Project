@@ -1,0 +1,1 @@
+obj/gen_ship.dep obj/gen_ship.o: src/gen_ship.cpp inc/gen_ship.hpp

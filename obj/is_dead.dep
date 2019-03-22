@@ -1,0 +1,2 @@
+obj/is_dead.dep obj/is_dead.o: src/is_dead.cpp inc/is_dead.hpp \
+ inc/check_dir.hpp

@@ -6,7 +6,7 @@ OBJECTS := $(patsubst src/%.cpp, obj/%.o, $(SOURCES))
 INC := -I./inc
 DEPENDS := $(patsubst src/%.cpp,obj/%.dep,$(SOURCES))
 
-compiler_flags := -Wall -Wextra -pedantic -std=c++11 -c -g
+C_flags := -c -g -pedantic -std=c++11 -Wall -Wextra 
 
 ifeq ($(MAKECMDGOALS),)
 	-include $(DEPENDS)
@@ -20,7 +20,7 @@ obj/%.dep : src/%.cpp
 	$(CC) $(INC) -MM $< -MT "$@ $(patsubst %.dep,%.o,$@)" -o $@
 
 obj/%.o :
-	$(CC) $(compiler_flags) $(INC) $< -o $@ 
+	$(CC) $(C_flags) $(INC) $< -o $@ 
 
 bin/exe : $(OBJECTS) ./bin
 	$(CC) $(OBJECTS) -o $@

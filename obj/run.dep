@@ -1,0 +1,2 @@
+obj/run.dep obj/run.o: src/run.cpp inc/run.hpp inc/other.hpp \
+ inc/gen_ship.hpp inc/is_dead.hpp

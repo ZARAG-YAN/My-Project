@@ -5,17 +5,17 @@ void other(std::string s, char a[][10])
 {
     if (s == "help") {
         help();
-    }   
+    }
     if (s == "show") {
-        show_board (a);    
-    }   
+        show_board (a);
+    }
     if (s == "start") {
         std::cout<< "\t**** The game started ****\n";
-    }   
+    }
     if (s == "exit" || s == "quit") {
        std::cout<<"You left the game ...\n";
        _Exit(s[0]);
-    }   
+    }
 }
 
 void help()
